@@ -1,0 +1,51 @@
+header .navbar-tabs {
+  justify-content: center;
+  /*ทำให้navbarอยู่ตรงกลาง*/
+}
+.highlight {
+  margin-bottom: 0 !important;
+  /*!important = ทำให้สำคัญมากกว่าโค้ดอื่นๆ*/
+}
+
+.highlight .highlight-item {
+  height: 416px;
+  background: url(/assets/images/home/banner/highlight.jpg) no-repeat center/cover;
+  /*no-repeat = ไม่เอารูปมาต่อๆกันเพิ่มให้เต็มขนาดที่เรากำหนด*/
+  color: #ffffff;
+  display: flex;
+  /*ยึดให้ภาพ flexible*/
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight .highlight-item h1{
+  font-size: 100px;
+}
+
+.thumbnail{
+  border-top: 0.25rem solid #ffffff;
+}
+
+
+.thumbnail .thumbnail-item +.thumbnail-item{
+  border-left: 0.20rem solid #ffffff;
+  /*+thumbnail-item คือ ทำอันต่อไป ผลคือไม่ทำอันแรก*/
+}
+
+/*
+.thumbnail .thumbnail-item:last-child{
+  border :none;
+}
+อันสุดท้ายไม่มีขอบ
+*/
+
+.thumbnail .thumbnail-item{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
