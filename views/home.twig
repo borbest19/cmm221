@@ -1,61 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>CMM 19</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+	{% extends 'layout/base.twig' %}
+
+	{% block stylesheet %}
 	<link rel="stylesheet" href="/assets/home.css">
-</head>
-<body>
-	<header>
-		<div class="has-text-centered">
-			<img src="/assets/images/logo.png" alt="" width="145" height="auto">
-		</div>
-			<nav class="navbar-tabs">
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-			<a href="#" class="navbar-item">WORK</a>
-		</nav>
-	</header>
+	{% endblock %}
+
+	{% block content %}
 	<main>
 		<section class="banner">
 			<div class="highlight">
 				<div class="columns">
-					<div class="column highlight-item">
-						<h1>BORBESTt</h1>
-					</div>
+					<a class="column highlight-item" style="background-image: url({{ highlight.url }});">
+						<h1>{{ highlight.title }}</h1>
+					</a>
 				</div>
 			</div>
 			<div class="thumbnail">
 				<div class="columns is-marginless">
-					<div class="column is-paddingless thumbnail-item"
-						style="background-image: url(/assets/images/home/banner/thumbnail-1.jpg);">
-						อะหนึ่ง
-					</div>
-					
-					<div class="column is-paddingless thumbnail-item"
-						style="background-image: url(/assets/images/home/banner/thumbnail-2.jpg);">
-						อะสอง
-					</div>
-					
-					<div class="column is-paddingless thumbnail-item"
-						style="background-image: url(/assets/images/home/banner/thumbnail-3.jpg);">
-						อะสาม
-					</div>
-					
-					<div class="column is-paddingless thumbnail-item"
-						style="background-image: url(/assets/images/home/banner/thumbnail-4.jpg);">
-						อะสี่
-					</div>
-					<div class="column is-paddingless thumbnail-item"
-						style="background-image: url(/assets/images/home/banner/thumbnail-5.jpg);">
-						อะห้า
-					</div>
+					{% for item in thumbnail %}
+					<a href="#" class="column thumbnail-item is-paddingless" style="background-image: url({{ item.url }});">
+						{{ item.title }}
+					</a>
+					{% endfor %}
 				</div>
 			</div>
 			
@@ -213,4 +178,4 @@
 			</div>
 		</section>
 	</main>
-</body>
+	{% endblock %}

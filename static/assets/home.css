@@ -1,7 +1,4 @@
-header .navbar-tabs {
-  justify-content: center;
-  /*ทำให้navbarอยู่ตรงกลาง*/
-}
+
 .highlight {
   margin-bottom: 0 !important;
   /*!important = ทำให้สำคัญมากกว่าโค้ดอื่นๆ*/
